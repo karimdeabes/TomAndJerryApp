@@ -101,7 +101,9 @@ fun TomCard(
                             .height(37.dp)
                             .fillMaxWidth()
                             .weight(1f)
-                            .background(color = LightBabyBlue, shape = RoundedCornerShape(10.dp)),
+                            .background(
+                                color = LightBabyBlue,
+                                shape = RoundedCornerShape(10.dp)),
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.Center
 
