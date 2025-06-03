@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TomAndJerryApp</string>
+    <string name="sport_tom">Sport Tom</string>
+    <string name="spy_tom">Spy Tom</string>
+    <string name="he_runs_1_meter_trips_over_his_boot">He runs 1 meter... trips over his boot.</string>
+    <string name="disguises_itself_as_a_table">Disguises itself as a table.</string>
+    <string name="he_loves_one_sidedly_and_is_beaten_by_the_other_side">He loves one-sidedly...\nand is beaten by the other side.</string>
+</resources>
