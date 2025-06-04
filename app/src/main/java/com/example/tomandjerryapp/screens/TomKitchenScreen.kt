@@ -36,6 +36,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import com.example.tomandjerryapp.R
+import com.example.tomandjerryapp.composables.HeaderText
 import com.example.tomandjerryapp.composables.PriceText
 import com.example.tomandjerryapp.composables.SpacerHorizontal
 import com.example.tomandjerryapp.composables.SpacerVertical
@@ -121,7 +122,7 @@ fun TomKitchenScreen() {
                     verticalArrangement = Arrangement.SpaceBetween,
                     horizontalAlignment = Alignment.Start
                 ) {
-                    HeaderText("Electric Tom pasta", 25)
+                    HeaderText("Electric Tom pasta", 25, FontWeight.Medium)
 
                     SpacerVertical(6)
 
@@ -172,7 +173,7 @@ fun TomKitchenScreen() {
 
             SpacerVertical(21)
 
-            HeaderText("Details", 22)
+            HeaderText("Details", 22, FontWeight.Medium)
 
             SpacerVertical(4)
 
@@ -207,7 +208,7 @@ fun TomKitchenScreen() {
 
             SpacerVertical(21)
 
-            HeaderText("Preparation method", 22)
+            HeaderText("Preparation method", 22, FontWeight.Medium)
 
             SpacerVertical(3)
 
@@ -306,12 +307,12 @@ fun TomKitchenScreen() {
                         )
                 )
                 SpacerHorizontal(10)
-                Column (
+                Column(
                     modifier = Modifier,
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
 
-                ){
+                ) {
                     Text(
                         modifier = Modifier
                             .offset(y = (2.dp)),
@@ -333,7 +334,7 @@ fun TomKitchenScreen() {
                             textDecoration = TextDecoration.LineThrough
                         ),
 
-                    )
+                        )
                 }
             }
         }
@@ -368,17 +369,6 @@ fun FoodIngredients(
     }
 }
 
-@Composable
-fun HeaderText(text: String, fontSize: Int) {
-    Text(
-        text = text,
-        modifier = Modifier,
-        color = DimBlack87Alpha,
-        fontSize = fontSize.sp,
-        fontFamily = IBMPlexSansArabic,
-        fontWeight = FontWeight.Medium
-    )
-}
 
 @Composable
 fun DetailsCard(

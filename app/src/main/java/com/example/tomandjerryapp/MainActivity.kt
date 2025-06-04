@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.example.tomandjerryapp.screens.JerryStoreScreen
+import com.example.tomandjerryapp.screens.TomAccountScreen
 import com.example.tomandjerryapp.screens.TomKitchenScreen
 
 class MainActivity : ComponentActivity() {
@@ -21,6 +22,7 @@ class MainActivity : ComponentActivity() {
                 Column(modifier = Modifier.padding(innerPadding)) {
 //                    JerryStoreScreen()
                     TomKitchenScreen()
+//                    TomAccountScreen()
                 }
             }
         }
