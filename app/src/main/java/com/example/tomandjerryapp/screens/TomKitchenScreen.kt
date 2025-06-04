@@ -237,16 +237,8 @@ fun TomKitchenScreen() {
                     StepContainer("4", "Serve with an insulating glove.")
                 }
                 item {
-                    SpacerVertical(10)
+                    SpacerVertical(74)
                 }
-                item {
-                    StepContainer("5", "Serve with an insulating glove.")
-                }
-                item {
-                    SpacerVertical(12)
-                }
-
-
             }
         }
 
