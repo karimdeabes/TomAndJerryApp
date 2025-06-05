@@ -85,7 +85,7 @@ fun TomAccountScreen() {
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(top = 200.dp) // عشان نسيب مكان للبروفايل اللي فوق
+                .padding(top = 200.dp)
                 .background(
                     color = White87Alpha,
                     shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp)
