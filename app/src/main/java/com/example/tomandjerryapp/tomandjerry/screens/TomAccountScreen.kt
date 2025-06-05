@@ -27,6 +27,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -48,29 +49,23 @@ import com.example.tomandjerryapp.ui.theme.White87Alpha
 
 @Composable
 fun TomAccountScreen() {
-
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
-
         Box(
             modifier = Modifier
                 .fillMaxSize()
                 .align(Alignment.TopCenter)
-                .background(
-                    color = DarkTealBlue
-                ),
+                .background(DarkTealBlue),
             contentAlignment = Alignment.TopStart
         ) {
             Image(
                 painter = painterResource(R.drawable.background_shape),
                 contentDescription = null,
                 modifier = Modifier
-                    .fillMaxWidth(1f)
+                    .fillMaxWidth()
                     .fillMaxHeight(0.185f)
-                    .rotate(
-                        1f
-                    ),
+                    .rotate(1f),
                 alignment = Alignment.TopCenter,
                 contentScale = ContentScale.FillBounds
             )
@@ -78,87 +73,71 @@ fun TomAccountScreen() {
                 painter = painterResource(R.drawable.background_shape_1),
                 contentDescription = null,
                 modifier = Modifier
-                    .fillMaxWidth(1f)
+                    .fillMaxWidth()
                     .fillMaxHeight(0.28f)
                     .offset(x = 50.dp),
                 alignment = Alignment.TopEnd,
                 contentScale = ContentScale.FillBounds
             )
-
             ProfileInfo()
-
         }
 
-        Column(
+        LazyColumn(
             modifier = Modifier
+                .fillMaxSize()
+                .padding(top = 200.dp) // عشان نسيب مكان للبروفايل اللي فوق
                 .background(
-                    color = White87Alpha, shape = RoundedCornerShape(
-                        topStart = 20.dp, topEnd = 20.dp
-                    )
+                    color = White87Alpha,
+                    shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp)
                 )
-                .fillMaxWidth()
-                .fillMaxHeight(0.784f)
-                .align(Alignment.BottomCenter)
+                .align(Alignment.BottomCenter),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            item { SpacerVertical(28) }
 
-            SpacerVertical(12)
+            item {
+                StatsItems(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 20.dp)
+                )
+            }
 
-            StatsItems(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
-            )
+            item { SpacerVertical(28) }
 
-            LazyColumn(
-                modifier = Modifier
-                    .fillMaxWidth()
-            ) {
-                item {
+            item {
+                SettingSection1(
+                    modifier = Modifier.padding(horizontal = 20.dp)
+                )
+            }
 
-                    SpacerVertical(28)
-                }
+            item {
+                HorizontalDivider(
+                    thickness = 0.9.dp,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
 
-                item {
+            item {
+                SettingSection2(
+                    modifier = Modifier.padding(horizontal = 20.dp)
+                )
+            }
 
-                    SettingSection1(
-                        modifier = Modifier
-                            .padding(horizontal = 16.dp)
+            item {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(40.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "v.TomBeta",
+                        fontSize = 15.sp,
+                        fontFamily = IBMPlexSansArabic,
+                        fontWeight = FontWeight.Normal,
+                        color = DarkGray60Alpha
                     )
-                }
-
-                item {
-
-                    HorizontalDivider(
-                        thickness = 0.7.dp,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                    )
-                }
-
-                item {
-
-                    SettingSection2(
-                        modifier = Modifier
-                            .padding(horizontal = 16.dp)
-                    )
-                }
-
-                item {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(40.dp)
-                            .align(Alignment.End),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = "v.TomBeta",
-                            fontSize = 15.sp,
-                            fontFamily = IBMPlexSansArabic,
-                            fontWeight = FontWeight.Normal,
-                            color = DarkGray60Alpha
-                        )
-                    }
                 }
             }
         }
@@ -210,7 +189,7 @@ fun ProfileInfo() {
                     color = Color.White.copy(alpha = 0.12f),
                     shape = RoundedCornerShape(60.dp)
                 )
-                .padding(vertical = 5.7.dp, horizontal = 16.dp)
+                .padding(vertical = 5.7.dp, horizontal = 14.dp)
                 .wrapContentSize(),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
@@ -221,7 +200,8 @@ fun ProfileInfo() {
                 color = Color.White,
                 fontSize = 12.4.sp,
                 fontFamily = IBMPlexSansArabic,
-                fontWeight = FontWeight.Medium
+                fontWeight = FontWeight.Medium,
+                textAlign = TextAlign.Center
             )
         }
     }
@@ -296,7 +276,7 @@ fun StatCard(
                 shape = RoundedCornerShape(16.dp)
             )
             .fillMaxWidth()
-            .height(71.dp)
+            .height(70.dp)
             .padding(start = 14.dp),
         horizontalArrangement = Arrangement.Start,
         verticalAlignment = Alignment.CenterVertically
@@ -304,7 +284,7 @@ fun StatCard(
         Image(
             modifier = Modifier
                 .align(Alignment.CenterVertically)
-                .size(52.dp),
+                .size(53.dp),
             painter = painter,
             contentDescription = null
 
@@ -321,13 +301,14 @@ fun StatCard(
                 text = stateValue,
                 modifier = Modifier,
                 color = DarkGray60Alpha,
-                fontSize = 20.sp,
+                fontSize = 22.sp,
                 fontFamily = IBMPlexSansArabic,
                 fontWeight = FontWeight.SemiBold
             )
             Text(
                 text = stateLabel,
-                modifier = Modifier,
+                modifier = Modifier
+                    .offset(y = (-4).dp),
                 color = DarkGray37Alpha,
                 fontSize = 15.sp,
                 fontFamily = IBMPlexSansArabic,
@@ -383,7 +364,7 @@ fun SettingSection2(
             25,
             FontWeight.Bold,
             modifier = Modifier
-                .padding(top = 12.5.dp, bottom = 12.dp)
+                .padding(top = 11.dp, bottom = 10.dp)
         )
 
         SettingItem(
@@ -410,7 +391,7 @@ fun SettingItem(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(bottom = 15.dp),
+            .padding(bottom = 14.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Start
     ) {
