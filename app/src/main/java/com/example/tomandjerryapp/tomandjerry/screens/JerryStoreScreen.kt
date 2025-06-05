@@ -1,4 +1,4 @@
-package com.example.tomandjerryapp.screens
+package com.example.tomandjerryapp.tomandjerry.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -32,9 +32,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tomandjerryapp.R
-import com.example.tomandjerryapp.composables.SpacerHorizontal
-import com.example.tomandjerryapp.composables.SpacerVertical
-import com.example.tomandjerryapp.composables.TomCard
+import com.example.tomandjerryapp.tomandjerry.composables.SpacerHorizontal
+import com.example.tomandjerryapp.tomandjerry.composables.SpacerVertical
+import com.example.tomandjerryapp.tomandjerry.composables.TomCard
 import com.example.tomandjerryapp.ui.theme.DarkBlue
 import com.example.tomandjerryapp.ui.theme.DeepOceanBlue
 import com.example.tomandjerryapp.ui.theme.IBMPlexSansArabic

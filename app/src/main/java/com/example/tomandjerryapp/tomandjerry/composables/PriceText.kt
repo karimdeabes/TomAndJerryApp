@@ -1,4 +1,4 @@
-package com.example.tomandjerryapp.composables
+package com.example.tomandjerryapp.tomandjerry.composables
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable

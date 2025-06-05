@@ -1,4 +1,4 @@
-package com.example.tomandjerryapp.composables
+package com.example.tomandjerryapp.tomandjerry.composables
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

@@ -1,4 +1,4 @@
-package com.example.tomandjerryapp.screens
+package com.example.tomandjerryapp.tomandjerry.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -36,10 +36,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import com.example.tomandjerryapp.R
-import com.example.tomandjerryapp.composables.HeaderText
-import com.example.tomandjerryapp.composables.PriceText
-import com.example.tomandjerryapp.composables.SpacerHorizontal
-import com.example.tomandjerryapp.composables.SpacerVertical
+import com.example.tomandjerryapp.tomandjerry.composables.HeaderText
+import com.example.tomandjerryapp.tomandjerry.composables.PriceText
+import com.example.tomandjerryapp.tomandjerry.composables.SpacerHorizontal
+import com.example.tomandjerryapp.tomandjerry.composables.SpacerVertical
 import com.example.tomandjerryapp.ui.theme.DarkGray37Alpha
 import com.example.tomandjerryapp.ui.theme.DarkGray60Alpha
 import com.example.tomandjerryapp.ui.theme.DarkTealBlue
@@ -55,7 +55,6 @@ import com.example.tomandjerryapp.ui.theme.White87Alpha
 
 @Composable
 fun TomKitchenScreen() {
-
 
     Box(
         modifier = Modifier.fillMaxSize()

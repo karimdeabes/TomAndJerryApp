@@ -9,9 +9,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.example.tomandjerryapp.screens.JerryStoreScreen
-import com.example.tomandjerryapp.screens.TomAccountScreen
-import com.example.tomandjerryapp.screens.TomKitchenScreen
+import com.example.tomandjerryapp.donuts.screens.HomeScreen
+import com.example.tomandjerryapp.donuts.screens.ItemScreen
+import com.example.tomandjerryapp.tomandjerry.screens.JerryStoreScreen
+import com.example.tomandjerryapp.tomandjerry.screens.TomAccountScreen
+import com.example.tomandjerryapp.tomandjerry.screens.TomKitchenScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +23,10 @@ class MainActivity : ComponentActivity() {
             Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                 Column(modifier = Modifier.padding(innerPadding)) {
 //                    JerryStoreScreen()
-                    TomKitchenScreen()
+//                    TomKitchenScreen()
 //                    TomAccountScreen()
+//                    HomeScreen()
+                    ItemScreen()
                 }
             }
         }
